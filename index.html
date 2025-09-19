@@ -1,0 +1,143 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutoCraft Mechanics — Home</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="AutoCraft Mechanics Home">
+        <i class="fa-solid fa-gear"></i>
+        <span>AutoCraft</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="parts.html">Spare Parts</a></li>
+          <li><a href="hire.html">Car Hire</a></li>
+          <li><a href="breakdown.html">Breakdown</a></li>
+          <li><a href="contact.html" class="btn-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / Landing -->
+    <section class="hero">
+      <!-- Replace the inline background image via CSS or set an <img> inside for better responsiveness -->
+      <div class="hero-overlay">
+        <div class="container hero-content">
+          <h1>Reliable mechanical services — fast, professional, local</h1>
+          <p>Servicing • Tires • Spare Parts • Car Hire • 24/7 Breakdown</p>
+          <div class="hero-ctas">
+            <a href="services.html" class="btn primary">See Services</a>
+            <a href="contact.html" class="btn outline">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      <!-- Placeholder hint for developer -->
+      <!-- Replace <insert image> with an actual image path or URL and remove the comment. -->
+      <!-- Example: <img src="images/hero.jpg" alt="Garage background" class="hero-img"> -->
+      <!-- <insert image> -->
+    </section>
+
+    <!-- Quick services row -->
+    <section class="quick-services container">
+      <article class="service-card">
+        <i class="fa-solid fa-tools service-icon"></i>
+        <h3>Servicing</h3>
+        <p>Full diagnostic, oil, filters, and scheduled maintenance.</p>
+      </article>
+
+      <article class="service-card">
+        <i class="fa-solid fa-tire service-icon"></i>
+        <h3>Tires</h3>
+        <p>Fitting, balancing, and quality brands stocked.</p>
+      </article>
+
+      <article class="service-card">
+        <i class="fa-solid fa-box-open service-icon"></i>
+        <h3>Spare Parts</h3>
+        <p>OEM & aftermarket parts — fast sourcing.</p>
+      </article>
+
+      <article class="service-card">
+        <i class="fa-solid fa-car-side service-icon"></i>
+        <h3>Car Hire</h3>
+        <p>Short-term and long-term hire options.</p>
+      </article>
+    </section>
+
+    <!-- Testimonials / small animated cards -->
+    <section class="container testimonials">
+      <h2>What customers say</h2>
+      <div class="test-grid">
+        <blockquote class="test-card">
+          <p>"Quick turnaround and honest pricing."</p>
+          <cite>— A. Mwangi</cite>
+        </blockquote>
+        <blockquote class="test-card">
+          <p>"Roadside rescue saved my day, super professional."</p>
+          <cite>— S. Karanja</cite>
+        </blockquote>
+        <blockquote class="test-card">
+          <p>"Parts were genuine and the car runs like new."</p>
+          <cite>— L. Otieno</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CTA strip -->
+    <section class="cta-strip">
+      <div class="container">
+        <p>Need help now? Call our 24/7 breakdown line — <strong>+254 700 000 000</strong></p>
+        <a class="btn small" href="breakdown.html">Request Assistance</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>AutoCraft</h4>
+        <p>Reliable car services — local technicians, transparent pricing.</p>
+      </div>
+      <nav>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="parts.html">Spare Parts</a></li>
+          <li><a href="hire.html">Car Hire</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h5>Contact</h5>
+        <address>
+          +254 700 000 000<br>
+          info@autocraft.example
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <small>&copy; <span id="year"></span> AutoCraft — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

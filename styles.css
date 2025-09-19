@@ -1,0 +1,209 @@
+
+/* styles.css
+   Single stylesheet for the site. Use CSS variables for quick theme changes.
+*/
+
+/* ========== Variables ========== */
+:root{
+  --bg: #fbfbfa;
+  --surface: #ffffff;
+  --muted: #9aa0a6;
+  --accent: #6b8e77;       /* soft neutral green */
+  --accent-2: #bdb4a8;     /* warm neutral */
+  --accent-contrast: #2f4f45;
+  --shadow: 0 6px 18px rgba(47,79,69,0.08);
+  --radius: 12px;
+  --glass: rgba(255,255,255,0.7);
+  --max-width: 1100px;
+  --transition: 220ms cubic-bezier(.2,.8,.2,1);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Reset minimal */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg, var(--bg), #f7f7f6);
+  color:#212121;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  font-size:16px;
+}
+
+/* utility container */
+.container{
+  width:94%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* accessible sr-only */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ========== Header ========== */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:40;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.75));
+  border-bottom:1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(47,79,69,0.03);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:0.75rem 0;
+}
+
+.logo{
+  display:flex;
+  gap:.6rem;
+  align-items:center;
+  text-decoration:none;
+  color:var(--accent-contrast);
+  font-weight:700;
+  font-size:1.05rem;
+}
+.logo i{background:var(--accent-2);padding:.45rem;border-radius:8px;color:#fff}
+
+/* nav */
+.primary-nav{margin-left:auto}
+.primary-nav ul{
+  display:flex;
+  gap:.5rem;
+  list-style:none;
+  padding:0;
+  margin:0;
+  align-items:center;
+}
+.primary-nav a{display:inline-block;padding:.5rem .8rem;border-radius:10px;color:inherit;text-decoration:none;transition:var(--transition)}
+.primary-nav a:hover{background:var(--glass);transform:translateY(-2px)}
+.primary-nav a.active{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+
+/* mobile nav toggle */
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:0;
+  font-size:1.05rem;
+  color:var(--accent-contrast);
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  text-decoration:none;
+  padding:.6rem 1rem;
+  border-radius:12px;
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  transition:var(--transition);
+  background:var(--accent);
+  color:#fff;
+  box-shadow: 0 8px 20px rgba(47,79,69,0.08);
+}
+.btn:hover{transform:translateY(-3px)}
+.btn.outline{background:transparent;border:1px solid rgba(47,79,69,0.08);color:var(--accent-contrast)}
+.btn.small{padding:.4rem .7rem;font-size:.95rem}
+.btn-link{padding:.4rem .6rem;border-radius:8px;background:transparent;border:1px solid transparent}
+
+/* ========== Hero ========== */
+.hero{
+  min-height:66vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background-image: url('<insert image>'); /* replace with real hero image or use <img> in HTML */
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid rgba(0,0,0,0.02);
+}
+.hero::after{
+  content:'';
+  position:absolute;inset:0;background:linear-gradient(180deg, rgba(10,10,10,0.28), rgba(10,10,10,0.05));
+}
+.hero-overlay{position:relative;padding:4rem 0;}
+.hero-content{color:#fff;max-width:780px}
+.hero h1{font-size:2.1rem;margin:0 0 .5rem;letter-spacing:-0.02em}
+.hero p{opacity:.95;margin:0 0 1.2rem;color:#f3f3f3}
+.hero-ctas .btn{margin-right:.6rem}
+
+/* ========== Quick services ========== */
+.quick-services{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin-top:-2.2rem;position:relative;z-index:10}
+.service-card{background:var(--surface);padding:1.1rem;border-radius:14px;box-shadow:var(--shadow);text-align:center;transition:var(--transition);border:1px solid rgba(0,0,0,0.03)}
+.service-card:hover{transform:translateY(-6px)}
+.service-icon{font-size:1.8rem;color:var(--accent);margin-bottom:.6rem}
+
+/* ========== Testimonials ========== */
+.testimonials{margin:3rem 0}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.test-card{background:linear-gradient(180deg,#fff,#fbfbfb);padding:1rem;border-radius:12px;border-left:4px solid var(--accent-2);transition:var(--transition);box-shadow:0 6px 18px rgba(0,0,0,0.03)}
+.test-card:hover{transform:translateY(-4px)}
+
+/* CTA strip */
+.cta-strip{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#fff;padding:.9rem 0;margin:2.4rem 0;border-radius:12px}
+.cta-strip .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+
+/* ========== Pages & grids ========== */
+.page-intro{padding:2rem 0 1.2rem}
+.grid{display:grid;gap:1rem}
+.services-list{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.service-detail{background:var(--surface);padding:1.2rem;border-radius:12px;box-shadow:var(--shadow);transition:var(--transition)}
+.service-detail h3{display:flex;gap:.6rem;align-items:center}
+
+/* Product / parts */
+.parts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.part-card{display:flex;gap:1rem;background:var(--surface);padding:0.8rem;border-radius:12px;align-items:center;box-shadow:var(--shadow)}
+.part-image{width:120px;height:80px;border-radius:8px;background:#f2f2f2;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.part-info h4{margin:0 0 .4rem}
+.part-actions{display:flex;align-items:center;justify-content:space-between;margin-top:.6rem}
+
+/* Hire and breakdown grids */
+.hire-grid,.breakdown-info{display:grid;grid-template-columns:1fr;gap:1rem}
+.hire-card{display:flex;gap:1rem;background:var(--surface);padding:1rem;border-radius:12px;box-shadow:var(--shadow)}
+.car-image{width:160px;height:100px;background:#eee;border-radius:8px}
+
+/* Contact form */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;margin:1rem 0}
+.contact-form label{display:block;margin-top:.6rem;font-weight:600}
+.contact-form input,.contact-form textarea{width:100%;padding:.7rem;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-top:.35rem}
+.form-actions{margin-top:1rem}
+
+/* footer */
+.site-footer{background:#fff;padding:2rem 0;border-top:1px solid rgba(0,0,0,0.04);margin-top:2rem}
+.footer-grid{display:grid;grid-template-columns:1fr 160px 1fr;gap:1rem}
+.footer-bottom{border-top:1px solid rgba(0,0,0,0.03);padding:1rem 0;margin-top:1rem;display:flex;justify-content:space-between;align-items:center}
+
+/* small tweaks */
+.btn.primary{background:var(--accent)}
+.btn.small{font-size:.95rem}
+
+/* ========== Animations ========== */
+@keyframes floatUp {
+  from {transform:translateY(8px);opacity:0}
+  to {transform:none;opacity:1}
+}
+.service-card, .test-card, .service-detail {animation: floatUp 450ms ease both;animation-delay:80ms}
+
+/* ========== Responsive ========== */
+@media (max-width:900px){
+  .header-inner{padding:0.6rem 0}
+  .primary-nav ul{display:none}
+  .nav-toggle{display:inline-block;margin-left:auto}
+  .primary-nav[open] ul{display:flex;flex-direction:column;background:transparent;padding:1rem;margin-top:.6rem;gap:.4rem}
+  .hero h1{font-size:1.6rem}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+}
+
+/* show mobile nav when aria-expanded true (controlled by JS) */
+.primary-nav[data-visible="true"] ul{display:flex;flex-direction:column;background:transparent;padding:1rem;margin-top:.6rem;gap:.5rem}

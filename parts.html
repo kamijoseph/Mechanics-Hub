@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Spare Parts — AutoCraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><i class="fa-solid fa-gear"></i><span>AutoCraft</span></a>
+      <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-3">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="primary-nav-3" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="parts.html" class="active">Spare Parts</a></li>
+          <li><a href="hire.html">Car Hire</a></li>
+          <li><a href="breakdown.html">Breakdown</a></li>
+          <li><a href="contact.html" class="btn-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Spare Parts & Accessories</h1>
+      <p>Browse common parts — for unavailable items we can order on request.</p>
+    </section>
+
+    <section class="parts-grid">
+      <!-- Example product card; repeat/remove as needed -->
+      <article class="part-card">
+        <div class="part-image">
+          <!-- <insert image> -->
+        </div>
+        <div class="part-info">
+          <h4>Brake Pads — Standard</h4>
+          <p>Fits many makes. High friction, low dust.</p>
+          <div class="part-actions">
+            <span class="price">KES 3,500</span>
+            <a class="btn small" href="contact.html">Request</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="part-card">
+        <div class="part-image"><!-- <insert image> --></div>
+        <div class="part-info">
+          <h4>Air Filter</h4>
+          <p>OEM equivalent, long life filter.</p>
+          <div class="part-actions"><span class="price">KES 1,200</span><a class="btn small" href="contact.html">Request</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid"><div><h4>AutoCraft</h4><p>Reliable car services.</p></div><nav><h5>Links</h5><ul><li><a href="services.html">Services</a></li></ul></nav><div><h5>Contact</h5><address>+254 700 000 000</address></div></div>
+    <div class="footer-bottom container"><small>&copy; <span id="year-3"></span> AutoCraft</small></div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

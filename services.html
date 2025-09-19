@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Services — AutoCraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header: reuse same header markup as in index.html -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><i class="fa-solid fa-gear"></i><span>AutoCraft</span></a>
+      <button id="nav-toggle-2" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-2">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="primary-nav-2" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="parts.html">Spare Parts</a></li>
+          <li><a href="hire.html">Car Hire</a></li>
+          <li><a href="breakdown.html">Breakdown</a></li>
+          <li><a href="contact.html" class="btn-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Our Services</h1>
+      <p>Comprehensive automotive care — from routine servicing to emergency rescue.</p>
+    </section>
+
+    <section class="grid services-list">
+      <article class="service-detail">
+        <h3><i class="fa-solid fa-wrench"></i> Full Servicing</h3>
+        <p>Engine checks, oil & fluids, brake inspection, scheduled maintenance.</p>
+      </article>
+
+      <article class="service-detail">
+        <h3><i class="fa-solid fa-tire"></i> Tires & Alignment</h3>
+        <p>New tires, rotation, wheel alignment and balancing for smooth, safe rides.</p>
+      </article>
+
+      <article class="service-detail">
+        <h3><i class="fa-solid fa-bolt"></i> Electrical Diagnostics</h3>
+        <p>Battery testing, alternator, starter, lights and ECU fault codes scanning.</p>
+      </article>
+
+      <article class="service-detail">
+        <h3><i class="fa-solid fa-car-burst"></i> Brake & Suspension</h3>
+        <p>Brake pad replacement, fluid change, shock absorbers and bushings.</p>
+      </article>
+
+      <article class="service-detail">
+        <h3><i class="fa-solid fa-clipboard-check"></i> Vehicle Inspection</h3>
+        <p>Pre-purchase inspections, safety checks and roadworthiness reports.</p>
+      </article>
+
+      <article class="service-detail">
+        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Custom Work</h3>
+        <p>Modifications, performance tuning and fabrication work on request.</p>
+      </article>
+    </section>
+
+    <section class="book-strip">
+      <div class="book-inner">
+        <div>
+          <h3>Want to book a service?</h3>
+          <p>We offer online booking and priority scheduling for repeat customers.</p>
+        </div>
+        <div>
+          <a href="contact.html" class="btn primary">Book Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <!-- same footer markup as index -->
+    <div class="container footer-grid">
+      <div><h4>AutoCraft</h4><p>Reliable car services — local technicians, transparent pricing.</p></div>
+      <nav><h5>Quick Links</h5><ul><li><a href="parts.html">Spare Parts</a></li><li><a href="hire.html">Car Hire</a></li></ul></nav>
+      <div><h5>Contact</h5><address>+254 700 000 000<br>info@autocraft.example</address></div>
+    </div>
+    <div class="footer-bottom container"><small>&copy; <span id="year-2"></span> AutoCraft</small></div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

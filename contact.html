@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact — AutoCraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><i class="fa-solid fa-gear"></i><span>AutoCraft</span></a>
+      <button id="nav-toggle-6" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-6">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="primary-nav-6" class="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="parts.html">Spare Parts</a></li>
+          <li><a href="hire.html">Car Hire</a></li>
+          <li><a href="breakdown.html">Breakdown</a></li>
+          <li><a href="contact.html" class="active btn-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <section class="page-intro">
+      <h1>Contact Us</h1>
+      <p>Questions, bookings, or emergency requests — reach out.</p>
+    </section>
+
+    <section class="contact-grid">
+      <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required placeholder="+2547...">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Send message</button>
+        </div>
+      </form>
+
+      <div class="contact-info">
+        <h3>Office & Garage</h3>
+        <p>123 Service Lane<br>City, Country</p>
+        <p><strong>Phone:</strong> +254 700 000 000</p>
+        <p><strong>Email:</strong> info@autocraft.example</p>
+
+        <h4>Business hours</h4>
+        <p>Mon–Sat: 08:00–18:00<br>Sun: Emergency only</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid"><div><h4>AutoCraft</h4></div><nav><h5>Links</h5><ul><li><a href="services.html">Services</a></li></ul></nav><div><h5>Contact</h5><address>+254 700 000 000</address></div></div>
+    <div class="footer-bottom container"><small>&copy; <span id="year-6"></span> AutoCraft</small></div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

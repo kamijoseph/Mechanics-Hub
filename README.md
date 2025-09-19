@@ -59,17 +59,6 @@ This project is a **portfolio-ready front-end build** meant to demonstrate:
 
 ---
 
-## 📷 Demo Screenshots  
-
-### 🏠 Landing Page  
-![Landing Page](<insert image>)  
-
-### 🛠 Services Page  
-![Services Page](<insert image>)  
-
-### 📱 Mobile Responsive View  
-![Responsive View](<insert image>)  
-
 ---
 
 ## 📜 License  
